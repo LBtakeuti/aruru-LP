@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 28.2837 3.20537" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<path id="Vector" d="M26.7709 0.88446C30.2808 1.65917 27.4734 2.61668 20.4968 3.0122C13.5202 3.40772 5.02245 3.09565 1.51254 2.32093C-1.99738 1.53554 0.810015 0.588716 7.79727 0.193213C14.7739 -0.202307 23.2716 0.109764 26.7815 0.884476L26.7709 0.88446Z" fill="url(#paint0_radial_181_35516)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_181_35516" cx="0" cy="0" r="1" gradientTransform="matrix(12.6487 -0.71591 0.101504 1.75317 -345.824 21.277)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFDE66"/>
+<stop offset="0.1" stop-color="#FFD42F"/>
+<stop offset="0.16" stop-color="#FFD017"/>
+<stop offset="0.22" stop-color="#E8BB13"/>
+<stop offset="0.37" stop-color="#B78E0A"/>
+<stop offset="0.5" stop-color="#936D05"/>
+<stop offset="0.61" stop-color="#7D5901"/>
+<stop offset="0.68" stop-color="#765200"/>
+<stop offset="0.71" stop-color="#704800"/>
+<stop offset="0.79" stop-color="#663900"/>
+<stop offset="0.88" stop-color="#602F00"/>
+<stop offset="1" stop-color="#5F2D00"/>
+</radialGradient>
+</defs>
+</svg>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>施工までの流れ | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== メインセクション ===== */
+    .flow-section {
+      position: relative;
+      width: 375px;
+      margin: 0 auto;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+    }
+
+    /* ===== 背景画像 ===== */
+    .bg-image {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 544px;
+      height: 363px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== タイトル ===== */
+    .section-title {
+      position: relative;
+      z-index: 1;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== ステップコンテナ ===== */
+    .steps-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 7px;
+    }
+
+    /* ===== ステップカード ===== */
+    .step-row {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .step-card {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .step-number {
+      background: #001f66;
+      border-radius: 2px 0 0 2px;
+      width: 60px;
+      padding: 8px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-label {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 11px;
+      color: #fff;
+    }
+
+    .step-num {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 28px;
+      color: #ffe500;
+    }
+
+    .step-content {
+      background: #fff;
+      border-radius: 0 2px 2px 0;
+      box-shadow: 0px 0px 3px rgba(160, 192, 212, 0.4);
+      padding: 21px 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 13px;
+      color: #001f66;
+      width: 172px;
+    }
+
+    .step-icon {
+      position: absolute;
+      right: -46px;
+    }
+
+    .step-icon img {
+      display: block;
+    }
+
+    /* ===== アイコンサイズ ===== */
+    .icon-line {
+      width: 60px;
+      height: 54px;
+    }
+
+    .icon-estimate {
+      width: 47px;
+      height: 71px;
+    }
+
+    .icon-washing {
+      width: 48px;
+      height: 70px;
+    }
+
+    /* ===== 矢印 ===== */
+    .arrow {
+      width: 40px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    .arrow svg {
+      width: 31px;
+      height: 15px;
+    }
+
+    /* ===== ステップ3 ===== */
+    .step-3 .step-content {
+      padding: 10px 16px;
+      width: 230px;
+    }
+
+    .step-3 .step-text {
+      width: auto;
+      text-align: center;
+      line-height: 17px;
+    }
+
+    .step-3 .step-sub {
+      font-size: 11px;
+      line-height: 17px;
+      display: block;
+    }
+
+    /* ===== ステップ1行 ===== */
+    .step-1-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .step-1-row .step-icon {
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+
+    /* ===== ステップ2行 ===== */
+    .step-2-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .step-2-row .step-icon {
+      position: absolute;
+      right: 7px;
+      top: 0;
+    }
+
+    .step-2-row .step-card {
+      margin-top: 14px;
+    }
+
+    /* ===== ステップ3行 ===== */
+    .step-3-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .step-3-row .step-icon {
+      position: absolute;
+      right: 8px;
+      top: 0;
+    }
+
+    .step-3-row .step-card {
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <section class="flow-section">
+    <!-- 背景画像 -->
+    <div class="bg-image">
+      <img src="section-10-assets/abe288d03eb9bd13361c2174d4c180f896cb8923.png" alt="">
+    </div>
+
+    <!-- タイトル -->
+    <h2 class="section-title">施工までの流れ</h2>
+
+    <!-- ステップコンテナ -->
+    <div class="steps-container">
+      <!-- ステップ1 -->
+      <div class="step-1-row">
+        <div class="step-card">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">01</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">あるる公式LINEからご予約</p>
+          </div>
+        </div>
+        <div class="step-icon">
+          <img src="section-10-assets/923e0c2beccc6b9ea54fedab233297e7b629cf93.png" alt="LINE" class="icon-line">
+        </div>
+      </div>
+
+      <!-- 矢印 -->
+      <div class="arrow">
+        <svg viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 15L0 0H31L15.5 15Z" fill="#001F66"/>
+        </svg>
+      </div>
+
+      <!-- ステップ2 -->
+      <div class="step-2-row">
+        <div class="step-icon">
+          <img src="section-10-assets/15000d58f58e7cdbb296d675d0749cdd5021aded.png" alt="見積もり" class="icon-estimate">
+        </div>
+        <div class="step-card">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">02</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">無料分解診断でお見積もり</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 矢印 -->
+      <div class="arrow">
+        <svg viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 15L0 0H31L15.5 15Z" fill="#001F66"/>
+        </svg>
+      </div>
+
+      <!-- ステップ3 -->
+      <div class="step-3-row">
+        <div class="step-icon">
+          <img src="section-10-assets/93b9f832dc58f288c68acfc243dfb14efa3acfc0.png" alt="施工" class="icon-washing">
+        </div>
+        <div class="step-card step-3">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">03</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">
+              ご依頼いただき施工スタート<br>
+              <span class="step-sub">※洗浄の必要がなければ、契約は不要！</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

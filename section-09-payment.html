@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>お支払い方法 | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== メインセクション ===== */
+    .payment-section {
+      width: 375px;
+      margin: 0 auto;
+      background: #f0f9ff;
+      padding: 30px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* ===== タイトル ===== */
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 26px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== カード共通 ===== */
+    .payment-card {
+      width: 335px;
+    }
+
+    .card-header {
+      background: #ffe500;
+      border-radius: 4px 4px 0 0;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-header-flex {
+      background: #ffe500;
+      border-radius: 4px 4px 0 0;
+      padding: 5px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .card-header h3 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.72px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    .card-header-sub {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 13px;
+      letter-spacing: 0.56px;
+      color: #001f66;
+    }
+
+    .card-body {
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* ===== アイコン行 ===== */
+    .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .icon-row-20 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* ===== 区切り線 ===== */
+    .divider {
+      width: 295px;
+      height: 1px;
+      background: #d8d8d8;
+    }
+
+    /* ===== タッチ決済払い ===== */
+    .touch-payment .card-body {
+      height: 397px;
+    }
+
+    .icon-contactless {
+      width: 34px;
+      height: 36px;
+    }
+
+    .icon-visa {
+      width: 77px;
+      height: 25px;
+    }
+
+    .icon-mastercard {
+      width: 60px;
+      height: 43px;
+    }
+
+    .icon-amex {
+      width: 40px;
+      height: 40px;
+    }
+
+    .icon-jcb {
+      width: 48px;
+      height: 37px;
+    }
+
+    .icon-diners {
+      width: 50px;
+      height: 37px;
+    }
+
+    .icon-discover {
+      width: 50px;
+      height: 32px;
+    }
+
+    .icon-applepay {
+      width: 50px;
+      height: 32px;
+    }
+
+    .icon-quicpay {
+      width: 50px;
+      height: 34px;
+    }
+
+    .icon-id {
+      width: 50px;
+      height: 33px;
+    }
+
+    .icon-transit {
+      width: 250px;
+      height: 160px;
+    }
+
+    /* ===== QRコード払い ===== */
+    .qr-payment .card-body {
+      padding: 23px 30px;
+    }
+
+    .qr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
+      width: 100%;
+    }
+
+    .icon-paypay {
+      width: 118px;
+      height: 30px;
+    }
+
+    .icon-aupay {
+      width: 113px;
+      height: 22px;
+    }
+
+    .icon-dpay {
+      width: 110px;
+      height: 32px;
+    }
+
+    .icon-rakutenpay {
+      width: 99px;
+      height: 38px;
+    }
+
+    .icon-merpay {
+      width: 84px;
+      height: 34px;
+      justify-self: center;
+      grid-column: span 2;
+    }
+
+    .icon-wechatpay {
+      width: 110px;
+      height: 34px;
+    }
+
+    .icon-alipay {
+      width: 136px;
+      height: 28px;
+    }
+
+    /* ===== クレジットカード払い ===== */
+    .credit-payment .card-body {
+      padding: 20px;
+      height: 129px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .credit-icons-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .credit-row-1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .credit-row-2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icon-visa-2 {
+      width: 77px;
+      height: 25px;
+    }
+
+    .icon-mastercard-2 {
+      width: 58px;
+      height: 35px;
+    }
+
+    .icon-jcb-2 {
+      width: 48px;
+      height: 37px;
+    }
+
+    .icon-amex-2 {
+      width: 42px;
+      height: 42px;
+    }
+
+    .icon-diners-2 {
+      width: 48px;
+      height: 35px;
+    }
+
+    .icon-discover-2 {
+      width: 55px;
+      height: 35px;
+    }
+
+    /* ===== あと払い ===== */
+    .later-payment .card-body {
+      padding: 22px 77px;
+    }
+
+    .icon-paidy {
+      width: 180px;
+      height: 50px;
+    }
+
+    /* ===== 現金払い ===== */
+    .cash-payment {
+      width: 335px;
+      height: 144px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .cash-payment-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ===== 画像共通 ===== */
+    .payment-card img {
+      display: block;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <section class="payment-section">
+    <!-- タイトル -->
+    <h2 class="section-title">お支払い方法</h2>
+
+    <!-- タッチ決済払い -->
+    <div class="payment-card touch-payment">
+      <div class="card-header">
+        <h3>タッチ決済払い</h3>
+      </div>
+      <div class="card-body">
+        <div class="icon-row">
+          <img src="section-09-assets/3f0470ab5f9192f766d5056a3ed7140bc7bd04ec.png" alt="コンタクトレス" class="icon-contactless">
+          <img src="section-09-assets/c7b5eefcb2962d9205d1b332c9cef14e48cfbed0.png" alt="VISA" class="icon-visa">
+          <img src="section-09-assets/0c7a4cc50f93db47e1e2b7593a385a66a8e58f11.png" alt="Mastercard" class="icon-mastercard">
+          <img src="section-09-assets/4e6a6048b26a42a55ea1244dbe647663a4cd992f.png" alt="AMEX" class="icon-amex">
+        </div>
+        <div class="icon-row-20">
+          <img src="section-09-assets/653ac2b29befb0ba5291e57e0fbc5a3f728613c9.png" alt="JCB" class="icon-jcb">
+          <img src="section-09-assets/856fb80accfc01e06e78e6bdedd6a7bf791611fe.png" alt="Diners Club" class="icon-diners">
+          <img src="section-09-assets/8936d7449d3a2566b5577e2a07f7c86f5e1793fd.png" alt="Discover" class="icon-discover">
+        </div>
+        <div class="divider"></div>
+        <div class="icon-row-20">
+          <img src="section-09-assets/4b914a86a6202acb7f5774fbc85567b870403b69.svg" alt="Apple Pay" class="icon-applepay">
+          <img src="section-09-assets/9a345715617d81befa514c351fd6b2cbeb73b337.png" alt="QUICPay" class="icon-quicpay">
+          <img src="section-09-assets/ba1e94f31c16c0c7ac3b0fc3f685fd2f4b80ef0d.png" alt="iD" class="icon-id">
+        </div>
+        <div class="divider"></div>
+        <img src="section-09-assets/909d9a698d60fb106ef88d66e7742416d0866d57.png" alt="交通系IC" class="icon-transit">
+      </div>
+    </div>
+
+    <!-- QRコード払い -->
+    <div class="payment-card qr-payment">
+      <div class="card-header">
+        <h3>QRコード払い</h3>
+      </div>
+      <div class="card-body">
+        <div class="qr-grid">
+          <img src="section-09-assets/7f134d742db6d5abf3958607031dc606d4b21e52.png" alt="PayPay" class="icon-paypay">
+          <img src="section-09-assets/d6561a90d706a040b52cd649a253df4ccf94adfc.png" alt="au PAY" class="icon-aupay">
+          <img src="section-09-assets/063b5ebaab78d3e0fda564a03fe23a5381b33b53.png" alt="d払い" class="icon-dpay">
+          <img src="section-09-assets/65c2390cfa0cd7a8a4443fd945d17b04e2769757.png" alt="楽天ペイ" class="icon-rakutenpay">
+          <img src="section-09-assets/59a8aa1690ff4482cbe64e372282487e8a6097b0.png" alt="メルペイ" class="icon-merpay">
+          <img src="section-09-assets/380e96910f10c88a243b685dd7f0df21ddae13ff.png" alt="WeChat Pay" class="icon-wechatpay">
+          <img src="section-09-assets/ab0aa9c06e5baf8559421e4a05958ea9cbfa5c91.png" alt="Alipay+" class="icon-alipay">
+        </div>
+      </div>
+    </div>
+
+    <!-- クレジットカード払い -->
+    <div class="payment-card credit-payment">
+      <div class="card-header-flex">
+        <h3>クレジットカード払い</h3>
+        <span class="card-header-sub">(タッチ決済なし)</span>
+      </div>
+      <div class="card-body">
+        <div class="credit-row-1">
+          <img src="section-09-assets/c7b5eefcb2962d9205d1b332c9cef14e48cfbed0.png" alt="VISA" class="icon-visa-2">
+          <img src="section-09-assets/22946b84a7bfae473683f0bb6c02ad7af2eba498.png" alt="Mastercard" class="icon-mastercard-2">
+          <img src="section-09-assets/653ac2b29befb0ba5291e57e0fbc5a3f728613c9.png" alt="JCB" class="icon-jcb-2">
+        </div>
+        <div class="credit-row-2">
+          <img src="section-09-assets/4e6a6048b26a42a55ea1244dbe647663a4cd992f.png" alt="AMEX" class="icon-amex-2">
+          <img src="section-09-assets/856fb80accfc01e06e78e6bdedd6a7bf791611fe.png" alt="Diners Club" class="icon-diners-2">
+          <img src="section-09-assets/8936d7449d3a2566b5577e2a07f7c86f5e1793fd.png" alt="Discover" class="icon-discover-2">
+        </div>
+      </div>
+    </div>
+
+    <!-- あと払い -->
+    <div class="payment-card later-payment">
+      <div class="card-header">
+        <h3>あと払い</h3>
+      </div>
+      <div class="card-body">
+        <img src="section-09-assets/017e6e7a7d15cb9efe9c2eca7f9f6a18f447a25a.png" alt="Paidy" class="icon-paidy">
+      </div>
+    </div>
+
+    <!-- 現金払い -->
+    <div class="payment-card cash-payment">
+      <img src="section-09-assets/cash-payment.png" alt="現金払い" class="cash-payment-img">
+    </div>
+  </section>
+</body>
+</html>

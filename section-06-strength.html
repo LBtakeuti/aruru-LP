@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>あるるの強み | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== メインセクション ===== */
+    .strength-section {
+      position: relative;
+      width: 375px;
+      height: 759.5px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    /* 背景画像 */
+    .strength-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('section-06-assets/20df66178331e8b5ac20bffbb85a4ad905a715db.png') center/cover no-repeat;
+      z-index: -1;
+    }
+
+    /* ===== タイトル ===== */
+    .section-title {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .aruru-logo {
+      width: 102px;
+      height: 38px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .aruru-logo img {
+      position: absolute;
+      top: 7.89%;
+      left: 6.28%;
+      width: 87.44%;
+      height: 89.47%;
+      object-fit: cover;
+    }
+
+    .title-text {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+      margin-left: 5px;
+      margin-top: 9px;
+    }
+
+    /* ===== カードコンテナ ===== */
+    .cards-container {
+      width: 335px;
+      height: 679.5px;
+      position: relative;
+    }
+
+    /* ===== 強みカード共通 ===== */
+    .strength-card {
+      position: absolute;
+      left: 0;
+      width: 335px;
+    }
+
+    .card-bg {
+      position: absolute;
+      width: 323px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, #f2f7fd 0.53%, #fffefe 50%, #f2f7fd 99.47%);
+      box-shadow: 2px 2px 3px rgba(160, 192, 212, 0.4);
+    }
+
+    .card-content {
+      position: absolute;
+      display: flex;
+      gap: 20px;
+    }
+
+    .card-text-area {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .card-number {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 28px;
+      color: #ff6095;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: #001f66;
+    }
+
+    .card-desc {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 14px;
+      color: #001f66;
+    }
+
+    .card-image {
+      width: 129px;
+      height: 129px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== 共通カードコンテンツ位置 ===== */
+    .strength-card .card-content {
+      top: 0;
+      left: 11px;
+    }
+
+    .strength-card .card-text-area {
+      width: 175px;
+    }
+
+    .strength-card .card-info {
+      margin-top: 6px;
+    }
+
+    .strength-card .card-bg {
+      top: 32px;
+      left: 0;
+      height: 110px;
+    }
+
+    .strength-card .card-image {
+      margin-top: 3px;
+    }
+
+    /* ===== カード1 ===== */
+    .card-1 {
+      top: 0;
+      height: 142px;
+    }
+
+    /* ===== カード2 ===== */
+    .card-2 {
+      top: 156px;
+      height: 142px;
+    }
+
+    /* ===== カード3 ===== */
+    .card-3 {
+      top: 312px;
+      height: 142px;
+    }
+
+    .card-3 .card-image {
+      border-radius: 50%;
+    }
+
+    /* ===== カード4 ===== */
+    .card-4 {
+      top: 468px;
+      height: 156px;
+    }
+
+    .card-4 .card-bg {
+      height: 124px;
+    }
+
+    .card-4 .card-image {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <section class="strength-section">
+    <!-- タイトル -->
+    <div class="section-title">
+      <div class="aruru-logo">
+        <img src="section-06-assets/087b1398df398053188e1165497950898977cabd.png" alt="あるる">
+      </div>
+      <span class="title-text">の強み</span>
+    </div>
+
+    <!-- カードコンテナ -->
+    <div class="cards-container">
+      <!-- カード1: 18年の家電レンタル事業 -->
+      <div class="strength-card card-1">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-text-area">
+            <span class="card-number">01</span>
+            <div class="card-info">
+              <p class="card-title">18年の家電レンタル事業で<br>培ったメンテナンススキル！</p>
+              <p class="card-desc">長年の経験と確かな技術で<br>満足間違いなしの洗浄をお約束！</p>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="section-06-assets/2b1ca5eb7e54cde242a54044ed72cddec7a8c894.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- カード2: ベテランスタッフによる施工 -->
+      <div class="strength-card card-2">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-text-area">
+            <span class="card-number">02</span>
+            <div class="card-info">
+              <p class="card-title">ベテランスタッフによる<br>施工！</p>
+              <p class="card-desc">在籍するスタッフは全員正社員！<br>経験豊富なベテランスタッフによる<br>施工で安心！</p>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="section-06-assets/890ec67291616c05f3bd7d356feadd22637a8ea8.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- カード3: 無料分解診断 -->
+      <div class="strength-card card-3">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-text-area">
+            <span class="card-number">03</span>
+            <div class="card-info">
+              <p class="card-title">無料分解診断で汚れを確認<br>してから施工スタート！</p>
+              <p class="card-desc">無料で分解後、汚れていなければ契約<br>の必要は無し！見積もり金額以上のご<br>請求もいたしません！</p>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="section-06-assets/f07cdcab9f2ba9c7671c30ee028490035ab02ec5.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- カード4: 代替品を用意 -->
+      <div class="strength-card card-4">
+        <div class="card-bg"></div>
+        <div class="card-content">
+          <div class="card-text-area">
+            <span class="card-number">04</span>
+            <div class="card-info">
+              <p class="card-title">万が一の故障に備えて<br>代替品を用意！</p>
+              <p class="card-desc">万が一、施行中に洗濯機の故障が起き<br>た場合は、代わりの洗濯機を設置させ<br>ていただき、お客様の洗濯機を当社で<br>修理してからお返しします！</p>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="section-06-assets/9ca3f18c4a5229d71ecde3d6655ff37397f51c78.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

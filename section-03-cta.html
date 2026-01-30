@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>CTAセクション | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== CTAセクション ===== */
+    .cta-section {
+      position: relative;
+      width: 375px;
+      height: 344px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 17px;
+      overflow: hidden;
+    }
+
+    /* 背景（マスク付き） */
+    .cta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 344px;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .cta-bg-mask {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 375px;
+      height: 344px;
+      -webkit-mask-image: url('section-03-assets/acf12c46d5e9e45a6b539385b4001822861078e8.svg');
+      mask-image: url('section-03-assets/acf12c46d5e9e45a6b539385b4001822861078e8.svg');
+      -webkit-mask-size: 375px 344px;
+      mask-size: 375px 344px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: 0px 0px;
+      mask-position: 0px 0px;
+    }
+
+    .cta-bg-mask img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* コンテンツ */
+    .cta-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* LINEテキスト */
+    .line-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 16px;
+      color: #13ab30;
+      text-align: center;
+      width: 235px;
+    }
+
+    /* LINE CTAボタン */
+    .line-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #2dc64b;
+      border-radius: 4px;
+      padding: 10px 34px;
+      box-shadow: 0px 1px 4px rgba(160, 192, 212, 0.4);
+      text-decoration: none;
+    }
+
+    .line-button-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .line-icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      padding: 0 2px;
+    }
+
+    .line-icon-wrap img {
+      width: 100%;
+      aspect-ratio: 203 / 194;
+      object-fit: cover;
+    }
+
+    .line-button-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 20px;
+      letter-spacing: 1.3px;
+      color: #fff;
+      text-shadow: 0px 2px 4px #1eb83c;
+      text-align: center;
+      width: 219px;
+    }
+
+    /* クーポン画像 */
+    .coupon-wrap {
+      width: 341px;
+      height: 152px;
+      position: relative;
+    }
+
+    .coupon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Instagram */
+    .instagram-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .instagram-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .instagram-icon-wrap img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+
+    .instagram-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 16px;
+      color: #000;
+      text-align: center;
+      width: 252px;
+    }
+  </style>
+</head>
+<body>
+  <section class="cta-section">
+    <!-- 背景（マスク付き） -->
+    <div class="cta-bg">
+      <div class="cta-bg-mask">
+        <img src="section-03-assets/777ca1a508ed7a07e002208fdc0502becf23ff52.png" alt="">
+      </div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="cta-content">
+      <!-- LINEテキスト -->
+      <p class="line-title">＼ LINEでかんたん予約 ／</p>
+
+      <!-- LINE CTAボタン -->
+      <a href="#" class="line-button">
+        <div class="line-button-inner">
+          <div class="line-icon-wrap">
+            <img src="section-03-assets/977f82d5c1f157771873970b8518ad871ac3eb5c.png" alt="LINE">
+          </div>
+          <span class="line-button-text">無料分解診断する</span>
+        </div>
+      </a>
+
+      <!-- クーポン画像（Figma SVGエクスポート） -->
+      <div class="coupon-wrap">
+        <img src="section-03-assets/coupon.svg" alt="お友だち登録で10%OFFクーポンプレゼント！">
+      </div>
+
+      <!-- Instagram -->
+      <div class="instagram-wrap">
+        <div class="instagram-icon-wrap">
+          <img src="section-03-assets/b1bcf0d1ce75555104cf90fbdd72d103ba6ebb9e.png" alt="Instagram">
+        </div>
+        <p class="instagram-text">公式インスタグラムも配信中！</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

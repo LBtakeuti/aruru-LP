@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>お支払い〜FAQ | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== セクション09: お支払い方法 ===== */
+
+    /* ===== メインセクション ===== */
+    .payment-section {
+      width: 375px;
+      margin: 0 auto;
+      background: #f0f9ff;
+      padding: 30px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* ===== タイトル ===== */
+    .payment-section .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 26px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== カード共通 ===== */
+    .payment-section .payment-card {
+      width: 335px;
+    }
+
+    .payment-section .card-header {
+      background: #ffe500;
+      border-radius: 4px 4px 0 0;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .payment-section .card-header-flex {
+      background: #ffe500;
+      border-radius: 4px 4px 0 0;
+      padding: 5px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .payment-section .card-header h3 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.72px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    .payment-section .card-header-sub {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 13px;
+      letter-spacing: 0.56px;
+      color: #001f66;
+    }
+
+    .payment-section .card-body {
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* ===== アイコン行 ===== */
+    .payment-section .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .payment-section .icon-row-20 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* ===== 区切り線 ===== */
+    .payment-section .divider {
+      width: 295px;
+      height: 1px;
+      background: #d8d8d8;
+    }
+
+    /* ===== タッチ決済払い ===== */
+    .payment-section .touch-payment .card-body {
+      height: 397px;
+    }
+
+    .payment-section .icon-contactless {
+      width: 34px;
+      height: 36px;
+    }
+
+    .payment-section .icon-visa {
+      width: 77px;
+      height: 25px;
+    }
+
+    .payment-section .icon-mastercard {
+      width: 60px;
+      height: 43px;
+    }
+
+    .payment-section .icon-amex {
+      width: 40px;
+      height: 40px;
+    }
+
+    .payment-section .icon-jcb {
+      width: 48px;
+      height: 37px;
+    }
+
+    .payment-section .icon-diners {
+      width: 50px;
+      height: 37px;
+    }
+
+    .payment-section .icon-discover {
+      width: 50px;
+      height: 32px;
+    }
+
+    .payment-section .icon-applepay {
+      width: 50px;
+      height: 32px;
+    }
+
+    .payment-section .icon-quicpay {
+      width: 50px;
+      height: 34px;
+    }
+
+    .payment-section .icon-id {
+      width: 50px;
+      height: 33px;
+    }
+
+    .payment-section .icon-transit {
+      width: 250px;
+      height: 160px;
+    }
+
+    /* ===== QRコード払い ===== */
+    .payment-section .qr-payment .card-body {
+      padding: 23px 30px;
+    }
+
+    .payment-section .qr-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 20px;
+      width: 100%;
+    }
+
+    .payment-section .icon-paypay {
+      width: 118px;
+      height: 30px;
+    }
+
+    .payment-section .icon-aupay {
+      width: 113px;
+      height: 22px;
+    }
+
+    .payment-section .icon-dpay {
+      width: 110px;
+      height: 32px;
+    }
+
+    .payment-section .icon-rakutenpay {
+      width: 99px;
+      height: 38px;
+    }
+
+    .payment-section .icon-merpay {
+      width: 84px;
+      height: 34px;
+      justify-self: center;
+      grid-column: span 2;
+    }
+
+    .payment-section .icon-wechatpay {
+      width: 110px;
+      height: 34px;
+    }
+
+    .payment-section .icon-alipay {
+      width: 136px;
+      height: 28px;
+    }
+
+    /* ===== クレジットカード払い ===== */
+    .payment-section .credit-payment .card-body {
+      padding: 20px;
+      height: 129px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .payment-section .credit-icons-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .payment-section .credit-row-1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .payment-section .credit-row-2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .payment-section .icon-visa-2 {
+      width: 77px;
+      height: 25px;
+    }
+
+    .payment-section .icon-mastercard-2 {
+      width: 58px;
+      height: 35px;
+    }
+
+    .payment-section .icon-jcb-2 {
+      width: 48px;
+      height: 37px;
+    }
+
+    .payment-section .icon-amex-2 {
+      width: 42px;
+      height: 42px;
+    }
+
+    .payment-section .icon-diners-2 {
+      width: 48px;
+      height: 35px;
+    }
+
+    .payment-section .icon-discover-2 {
+      width: 55px;
+      height: 35px;
+    }
+
+    /* ===== あと払い ===== */
+    .payment-section .later-payment .card-body {
+      padding: 22px 77px;
+    }
+
+    .payment-section .icon-paidy {
+      width: 180px;
+      height: 50px;
+    }
+
+    /* ===== 現金払い ===== */
+    .payment-section .cash-payment {
+      width: 335px;
+      height: 144px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .payment-section .cash-payment-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ===== 画像共通 ===== */
+    .payment-section .payment-card img {
+      display: block;
+      object-fit: contain;
+    }
+
+    /* ===== セクション03: CTA ===== */
+
+    /* ===== CTAセクション ===== */
+    .cta-section {
+      position: relative;
+      width: 375px;
+      height: 344px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 17px;
+      overflow: hidden;
+    }
+
+    /* 背景（マスク付き） */
+    .cta-section .cta-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 344px;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .cta-section .cta-bg-mask {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 375px;
+      height: 344px;
+      -webkit-mask-image: url('section-03-assets/acf12c46d5e9e45a6b539385b4001822861078e8.svg');
+      mask-image: url('section-03-assets/acf12c46d5e9e45a6b539385b4001822861078e8.svg');
+      -webkit-mask-size: 375px 344px;
+      mask-size: 375px 344px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: 0px 0px;
+      mask-position: 0px 0px;
+    }
+
+    .cta-section .cta-bg-mask img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* コンテンツ */
+    .cta-section .cta-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    /* LINEテキスト */
+    .cta-section .line-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 16px;
+      color: #13ab30;
+      text-align: center;
+      width: 235px;
+    }
+
+    /* LINE CTAボタン */
+    .cta-section .line-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #2dc64b;
+      border-radius: 4px;
+      padding: 10px 34px;
+      box-shadow: 0px 1px 4px rgba(160, 192, 212, 0.4);
+      text-decoration: none;
+    }
+
+    .cta-section .line-button-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .cta-section .line-icon-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      padding: 0 2px;
+    }
+
+    .cta-section .line-icon-wrap img {
+      width: 100%;
+      aspect-ratio: 203 / 194;
+      object-fit: cover;
+    }
+
+    .cta-section .line-button-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 20px;
+      letter-spacing: 1.3px;
+      color: #fff;
+      text-shadow: 0px 2px 4px #1eb83c;
+      text-align: center;
+      width: 219px;
+    }
+
+    /* クーポン画像 */
+    .cta-section .coupon-wrap {
+      width: 341px;
+      height: 152px;
+      position: relative;
+    }
+
+    .cta-section .coupon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Instagram */
+    .cta-section .instagram-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .cta-section .instagram-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-section .instagram-icon-wrap img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+    }
+
+    .cta-section .instagram-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 16px;
+      color: #000;
+      text-align: center;
+      width: 252px;
+    }
+
+    /* ===== セクション10: 施工までの流れ ===== */
+
+    /* ===== メインセクション ===== */
+    .flow-section {
+      position: relative;
+      width: 375px;
+      margin: 0 auto;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+    }
+
+    /* ===== 背景画像 ===== */
+    .flow-section .bg-image {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 544px;
+      height: 363px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .flow-section .bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== タイトル ===== */
+    .flow-section .section-title {
+      position: relative;
+      z-index: 1;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== ステップコンテナ ===== */
+    .flow-section .steps-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 7px;
+    }
+
+    /* ===== ステップカード ===== */
+    .flow-section .step-row {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .flow-section .step-card {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .flow-section .step-number {
+      background: #001f66;
+      border-radius: 2px 0 0 2px;
+      width: 60px;
+      padding: 8px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flow-section .step-label {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 11px;
+      color: #fff;
+    }
+
+    .flow-section .step-num {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 28px;
+      color: #ffe500;
+    }
+
+    .flow-section .step-content {
+      background: #fff;
+      border-radius: 0 2px 2px 0;
+      box-shadow: 0px 0px 3px rgba(160, 192, 212, 0.4);
+      padding: 21px 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flow-section .step-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 13px;
+      color: #001f66;
+      width: 172px;
+    }
+
+    .flow-section .step-icon {
+      position: absolute;
+      right: -46px;
+    }
+
+    .flow-section .step-icon img {
+      display: block;
+    }
+
+    /* ===== アイコンサイズ ===== */
+    .flow-section .icon-line {
+      width: 60px;
+      height: 54px;
+    }
+
+    .flow-section .icon-estimate {
+      width: 47px;
+      height: 71px;
+    }
+
+    .flow-section .icon-washing {
+      width: 48px;
+      height: 70px;
+    }
+
+    /* ===== 矢印 ===== */
+    .flow-section .arrow {
+      width: 40px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    .flow-section .arrow svg {
+      width: 31px;
+      height: 15px;
+    }
+
+    /* ===== ステップ3 ===== */
+    .flow-section .step-3 .step-content {
+      padding: 10px 16px;
+      width: 230px;
+    }
+
+    .flow-section .step-3 .step-text {
+      width: auto;
+      text-align: center;
+      line-height: 17px;
+    }
+
+    .flow-section .step-3 .step-sub {
+      font-size: 11px;
+      line-height: 17px;
+      display: block;
+    }
+
+    /* ===== ステップ1行 ===== */
+    .flow-section .step-1-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .flow-section .step-1-row .step-icon {
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
+
+    /* ===== ステップ2行 ===== */
+    .flow-section .step-2-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .flow-section .step-2-row .step-icon {
+      position: absolute;
+      right: 7px;
+      top: 0;
+    }
+
+    .flow-section .step-2-row .step-card {
+      margin-top: 14px;
+    }
+
+    /* ===== ステップ3行 ===== */
+    .flow-section .step-3-row {
+      position: relative;
+      width: 335px;
+    }
+
+    .flow-section .step-3-row .step-icon {
+      position: absolute;
+      right: 8px;
+      top: 0;
+    }
+
+    .flow-section .step-3-row .step-card {
+      margin-top: 6px;
+    }
+
+    /* ===== セクション11: お客様の声 ===== */
+
+    /* ===== メインセクション ===== */
+    .reviews-section {
+      position: relative;
+      width: 375px;
+      margin: 0 auto;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ===== 背景画像 ===== */
+    .reviews-section .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .reviews-section .bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== レビューブロック ===== */
+    .reviews-section .review-block {
+      position: relative;
+      z-index: 1;
+      width: 335px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* ===== タイトル ===== */
+    .reviews-section .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== Before/After 画像 ===== */
+    .reviews-section .before-after-img {
+      width: 280px;
+      height: 175px;
+    }
+
+    .reviews-section .before-after-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== レビューコメント ===== */
+    .reviews-section .review-comment {
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      width: 100%;
+    }
+
+    .reviews-section .review-comment.right {
+      flex-direction: row-reverse;
+    }
+
+    .reviews-section .avatar {
+      width: 70px;
+      height: 77px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .reviews-section .avatar img {
+      width: 100%;
+      height: auto;
+    }
+
+    .reviews-section .speech-bubble {
+      position: relative;
+      background: #fff;
+      border: 2px solid #5ac0de;
+      border-radius: 10px;
+      padding: 11px 15px;
+      flex: 1;
+    }
+
+    .reviews-section .speech-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: 15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .reviews-section .speech-bubble.left::before {
+      left: -12px;
+      border-width: 8px 12px 8px 0;
+      border-color: transparent #5ac0de transparent transparent;
+    }
+
+    .reviews-section .speech-bubble.left::after {
+      content: '';
+      position: absolute;
+      bottom: 17px;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 10px 6px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    .reviews-section .speech-bubble.right::before {
+      right: -12px;
+      border-width: 8px 0 8px 12px;
+      border-color: transparent transparent transparent #5ac0de;
+    }
+
+    .reviews-section .speech-bubble.right::after {
+      content: '';
+      position: absolute;
+      bottom: 17px;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 10px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .reviews-section .comment-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.56px;
+      color: #001f66;
+      margin-bottom: 2px;
+    }
+
+    .reviews-section .comment-author {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.48px;
+      color: #000;
+      text-align: right;
+    }
+
+    /* ===== 区切り線 ===== */
+    .reviews-section .divider {
+      position: relative;
+      z-index: 1;
+      width: 280px;
+      height: 2px;
+      background: #ffe500;
+    }
+
+    /* ===== レビュー2 ===== */
+    .reviews-section .review-2 .avatar {
+      width: 72px;
+      height: 78px;
+    }
+
+    /* ===== レビュー3 ===== */
+    .reviews-section .review-3 .avatar {
+      width: 70px;
+      height: 78px;
+    }
+
+    /* ===== セクション12: FAQ ===== */
+
+    /* ===== メインセクション ===== */
+    .faq-section {
+      width: 375px;
+      margin: 0 auto;
+      background: #001f66;
+      padding: 30px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ===== タイトル ===== */
+    .faq-section .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .faq-section .title-badge {
+      width: 96px;
+      height: 54px;
+    }
+
+    .faq-section .title-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ===== FAQカード ===== */
+    .faq-section .faq-card {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0px 0px 3px rgba(160, 192, 212, 0.4);
+      padding: 16px 10px;
+      width: 100%;
+    }
+
+    .faq-section .faq-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ===== Q行 ===== */
+    .faq-section .question-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .faq-section .q-icon {
+      width: 31px;
+      height: 31px;
+      background: #5ac0de;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .faq-section .q-icon span {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 14px;
+      letter-spacing: 0.72px;
+      color: #fff;
+    }
+
+    .faq-section .question-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.64px;
+      color: #001f66;
+      flex: 1;
+    }
+
+    /* ===== 区切り線 ===== */
+    .faq-section .divider {
+      width: 100%;
+      height: 1px;
+      background: #d8d8d8;
+    }
+
+    /* ===== A行 ===== */
+    .faq-section .answer-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .faq-section .a-icon {
+      width: 31px;
+      height: 31px;
+      background: #ff568f;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .faq-section .a-icon span {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 12px;
+      letter-spacing: 0.72px;
+      color: #fff;
+    }
+
+    .faq-section .answer-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.64px;
+      color: #ff568f;
+      flex: 1;
+    }
+
+    /* ===== 回答詳細 ===== */
+    .faq-section .answer-detail {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.56px;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== セクション09: お支払い方法 ===== -->
+  <section class="payment-section">
+    <!-- タイトル -->
+    <h2 class="section-title">お支払い方法</h2>
+
+    <!-- タッチ決済払い -->
+    <div class="payment-card touch-payment">
+      <div class="card-header">
+        <h3>タッチ決済払い</h3>
+      </div>
+      <div class="card-body">
+        <div class="icon-row">
+          <img src="section-09-assets/3f0470ab5f9192f766d5056a3ed7140bc7bd04ec.png" alt="コンタクトレス" class="icon-contactless">
+          <img src="section-09-assets/c7b5eefcb2962d9205d1b332c9cef14e48cfbed0.png" alt="VISA" class="icon-visa">
+          <img src="section-09-assets/0c7a4cc50f93db47e1e2b7593a385a66a8e58f11.png" alt="Mastercard" class="icon-mastercard">
+          <img src="section-09-assets/4e6a6048b26a42a55ea1244dbe647663a4cd992f.png" alt="AMEX" class="icon-amex">
+        </div>
+        <div class="icon-row-20">
+          <img src="section-09-assets/653ac2b29befb0ba5291e57e0fbc5a3f728613c9.png" alt="JCB" class="icon-jcb">
+          <img src="section-09-assets/856fb80accfc01e06e78e6bdedd6a7bf791611fe.png" alt="Diners Club" class="icon-diners">
+          <img src="section-09-assets/8936d7449d3a2566b5577e2a07f7c86f5e1793fd.png" alt="Discover" class="icon-discover">
+        </div>
+        <div class="divider"></div>
+        <div class="icon-row-20">
+          <img src="section-09-assets/4b914a86a6202acb7f5774fbc85567b870403b69.svg" alt="Apple Pay" class="icon-applepay">
+          <img src="section-09-assets/9a345715617d81befa514c351fd6b2cbeb73b337.png" alt="QUICPay" class="icon-quicpay">
+          <img src="section-09-assets/ba1e94f31c16c0c7ac3b0fc3f685fd2f4b80ef0d.png" alt="iD" class="icon-id">
+        </div>
+        <div class="divider"></div>
+        <img src="section-09-assets/909d9a698d60fb106ef88d66e7742416d0866d57.png" alt="交通系IC" class="icon-transit">
+      </div>
+    </div>
+
+    <!-- QRコード払い -->
+    <div class="payment-card qr-payment">
+      <div class="card-header">
+        <h3>QRコード払い</h3>
+      </div>
+      <div class="card-body">
+        <div class="qr-grid">
+          <img src="section-09-assets/7f134d742db6d5abf3958607031dc606d4b21e52.png" alt="PayPay" class="icon-paypay">
+          <img src="section-09-assets/d6561a90d706a040b52cd649a253df4ccf94adfc.png" alt="au PAY" class="icon-aupay">
+          <img src="section-09-assets/063b5ebaab78d3e0fda564a03fe23a5381b33b53.png" alt="d払い" class="icon-dpay">
+          <img src="section-09-assets/65c2390cfa0cd7a8a4443fd945d17b04e2769757.png" alt="楽天ペイ" class="icon-rakutenpay">
+          <img src="section-09-assets/59a8aa1690ff4482cbe64e372282487e8a6097b0.png" alt="メルペイ" class="icon-merpay">
+          <img src="section-09-assets/380e96910f10c88a243b685dd7f0df21ddae13ff.png" alt="WeChat Pay" class="icon-wechatpay">
+          <img src="section-09-assets/ab0aa9c06e5baf8559421e4a05958ea9cbfa5c91.png" alt="Alipay+" class="icon-alipay">
+        </div>
+      </div>
+    </div>
+
+    <!-- クレジットカード払い -->
+    <div class="payment-card credit-payment">
+      <div class="card-header-flex">
+        <h3>クレジットカード払い</h3>
+        <span class="card-header-sub">(タッチ決済なし)</span>
+      </div>
+      <div class="card-body">
+        <div class="credit-row-1">
+          <img src="section-09-assets/c7b5eefcb2962d9205d1b332c9cef14e48cfbed0.png" alt="VISA" class="icon-visa-2">
+          <img src="section-09-assets/22946b84a7bfae473683f0bb6c02ad7af2eba498.png" alt="Mastercard" class="icon-mastercard-2">
+          <img src="section-09-assets/653ac2b29befb0ba5291e57e0fbc5a3f728613c9.png" alt="JCB" class="icon-jcb-2">
+        </div>
+        <div class="credit-row-2">
+          <img src="section-09-assets/4e6a6048b26a42a55ea1244dbe647663a4cd992f.png" alt="AMEX" class="icon-amex-2">
+          <img src="section-09-assets/856fb80accfc01e06e78e6bdedd6a7bf791611fe.png" alt="Diners Club" class="icon-diners-2">
+          <img src="section-09-assets/8936d7449d3a2566b5577e2a07f7c86f5e1793fd.png" alt="Discover" class="icon-discover-2">
+        </div>
+      </div>
+    </div>
+
+    <!-- あと払い -->
+    <div class="payment-card later-payment">
+      <div class="card-header">
+        <h3>あと払い</h3>
+      </div>
+      <div class="card-body">
+        <img src="section-09-assets/017e6e7a7d15cb9efe9c2eca7f9f6a18f447a25a.png" alt="Paidy" class="icon-paidy">
+      </div>
+    </div>
+
+    <!-- 現金払い -->
+    <div class="payment-card cash-payment">
+      <img src="section-09-assets/cash-payment.png" alt="現金払い" class="cash-payment-img">
+    </div>
+  </section>
+
+  <!-- ===== セクション03: CTA ===== -->
+  <section class="cta-section">
+    <!-- 背景（マスク付き） -->
+    <div class="cta-bg">
+      <div class="cta-bg-mask">
+        <img src="section-03-assets/777ca1a508ed7a07e002208fdc0502becf23ff52.png" alt="">
+      </div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="cta-content">
+      <!-- LINEテキスト -->
+      <p class="line-title">＼ LINEでかんたん予約 ／</p>
+
+      <!-- LINE CTAボタン -->
+      <a href="#" class="line-button">
+        <div class="line-button-inner">
+          <div class="line-icon-wrap">
+            <img src="section-03-assets/977f82d5c1f157771873970b8518ad871ac3eb5c.png" alt="LINE">
+          </div>
+          <span class="line-button-text">無料分解診断する</span>
+        </div>
+      </a>
+
+      <!-- クーポン画像（Figma SVGエクスポート） -->
+      <div class="coupon-wrap">
+        <img src="section-03-assets/coupon.svg" alt="お友だち登録で10%OFFクーポンプレゼント！">
+      </div>
+
+      <!-- Instagram -->
+      <div class="instagram-wrap">
+        <div class="instagram-icon-wrap">
+          <img src="section-03-assets/b1bcf0d1ce75555104cf90fbdd72d103ba6ebb9e.png" alt="Instagram">
+        </div>
+        <p class="instagram-text">公式インスタグラムも配信中！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== セクション10: 施工までの流れ ===== -->
+  <section class="flow-section">
+    <!-- 背景画像 -->
+    <div class="bg-image">
+      <img src="section-10-assets/abe288d03eb9bd13361c2174d4c180f896cb8923.png" alt="">
+    </div>
+
+    <!-- タイトル -->
+    <h2 class="section-title">施工までの流れ</h2>
+
+    <!-- ステップコンテナ -->
+    <div class="steps-container">
+      <!-- ステップ1 -->
+      <div class="step-1-row">
+        <div class="step-card">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">01</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">あるる公式LINEからご予約</p>
+          </div>
+        </div>
+        <div class="step-icon">
+          <img src="section-10-assets/923e0c2beccc6b9ea54fedab233297e7b629cf93.png" alt="LINE" class="icon-line">
+        </div>
+      </div>
+
+      <!-- 矢印 -->
+      <div class="arrow">
+        <svg viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 15L0 0H31L15.5 15Z" fill="#001F66"/>
+        </svg>
+      </div>
+
+      <!-- ステップ2 -->
+      <div class="step-2-row">
+        <div class="step-icon">
+          <img src="section-10-assets/15000d58f58e7cdbb296d675d0749cdd5021aded.png" alt="見積もり" class="icon-estimate">
+        </div>
+        <div class="step-card">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">02</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">無料分解診断でお見積もり</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 矢印 -->
+      <div class="arrow">
+        <svg viewBox="0 0 31 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.5 15L0 0H31L15.5 15Z" fill="#001F66"/>
+        </svg>
+      </div>
+
+      <!-- ステップ3 -->
+      <div class="step-3-row">
+        <div class="step-icon">
+          <img src="section-10-assets/93b9f832dc58f288c68acfc243dfb14efa3acfc0.png" alt="施工" class="icon-washing">
+        </div>
+        <div class="step-card step-3">
+          <div class="step-number">
+            <span class="step-label">STEP</span>
+            <span class="step-num">03</span>
+          </div>
+          <div class="step-content">
+            <p class="step-text">
+              ご依頼いただき施工スタート<br>
+              <span class="step-sub">※洗浄の必要がなければ、契約は不要！</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== セクション11: お客様の声 ===== -->
+  <section class="reviews-section">
+    <!-- 背景画像 -->
+    <div class="bg-image">
+      <img src="section-11-assets/cfdd0cc00047d09d6749d31873906985a62f94b3.png" alt="">
+    </div>
+
+    <!-- レビュー1 -->
+    <div class="review-block">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/ba0c2c305130c9f3c47e758ea7a3e861e3d98de8.png" alt="Before After">
+      </div>
+      <div class="review-comment">
+        <div class="avatar">
+          <img src="section-11-assets/5fb5df3f62fcc7898d5e1bf890062fe9b12b239b.png" alt="お客様A">
+        </div>
+        <div class="speech-bubble left">
+          <p class="comment-text">黒カビや汚れがこんなにあったのかと驚きました。プロの技術で完全にキレイになりました。</p>
+          <p class="comment-author">50代主婦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区切り線 -->
+    <div class="divider"></div>
+
+    <!-- レビュー2 -->
+    <div class="review-block review-2">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/5df7ac5d7ad69d730141804d321fdefeb43d7308.png" alt="Before After">
+      </div>
+      <div class="review-comment right">
+        <div class="avatar">
+          <img src="section-11-assets/40fc911d825b928e4155e4c8df0cbd804c09a640.png" alt="お客様B">
+        </div>
+        <div class="speech-bubble right">
+          <p class="comment-text">カビの匂いが気にならなくなって、洗面所に清潔感がでました！</p>
+          <p class="comment-author">40代主婦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区切り線 -->
+    <div class="divider"></div>
+
+    <!-- レビュー3 -->
+    <div class="review-block review-3">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/3282ce8b8a0fd6ebb69ee2e778a060b867e8dc3c.png" alt="Before After">
+      </div>
+      <div class="review-comment">
+        <div class="avatar">
+          <img src="section-11-assets/da86d319bff7588ac4db8c1bceda21cdb70416ab.png" alt="お客様C">
+        </div>
+        <div class="speech-bubble left">
+          <p class="comment-text">洗濯機クリーナーを使ってメンテナンスしていましたが、実際の汚れをみてびっくりしました！</p>
+          <p class="comment-author">50代主婦</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== セクション12: FAQ ===== -->
+  <section class="faq-section">
+    <!-- タイトル -->
+    <div class="title-container">
+      <div class="title-badge">
+        <img src="section-12-assets/Group199.png" alt="教えて！">
+      </div>
+    </div>
+
+    <!-- FAQ 1 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">洗濯機クリーニングの料金はいくらですか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">洗濯機のタイプによって料金が異なります。</p>
+        </div>
+        <p class="answer-detail">エコノミープランの場合、ドラム式は9,800円、縦型は4,800円です(税込)。作業時間は2〜3時間程度です。詳細は無料分解診断でお見積りいたします。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">追加料金はかかりますか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">プラン確定後の追加料金はかかりません。</p>
+        </div>
+        <p class="answer-detail">分解診断後にプランをご提案し、料金ご提示後にご依頼いただき作業開始します。作業後に追加料金は一切発生いたしません。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">どんな洗浄剤を使っていますか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">アルカリ電解水などの人体に害のない薬剤を使用します。</p>
+        </div>
+        <p class="answer-detail">家族の健康を守るため、人体に影響のない成分を使用し、作業後もしっかりとすすぎを行います。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">作業中は家にいないといけませんか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">作業中は基本的にご在宅をお願いしております。</p>
+        </div>
+        <p class="answer-detail">作業の進行状況をご確認いただき、ご質問があればお答えできます。ただし、短時間のお出かけであれば対応可能な場合もありますので、お気軽にご相談ください。スペシャルプランであれば、弊社に持ち帰り、作業いたしますので、お子さんがいる方やペットがいる家庭の方にはおすすめです。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">作業スタッフはどんな人ですか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">実績をもつ経験豊富な正社員のスタッフが作業を行います。</p>
+        </div>
+        <p class="answer-detail">専門の研修を受けたプロフェッショナルが、丁寧かつ迅速に作業いたします。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">作業後に高額な請求をされることはありますか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">いいえ、弊社では作業後に高額な請求をすることはありません。</p>
+        </div>
+        <p class="answer-detail">作業前にお客様に見積もりを提示し、金額にご納得いただいてから施工させていただきます。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">頼む人の割合は？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">9割以上のお客様からご依頼いただいております。</p>
+        </div>
+        <p class="answer-detail">無料分解診断の後、お客様の98％から、クリーニングのご依頼をいただいております。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">どんなエリアに対応していますか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">現在、12の地域で対応可能です。</p>
+        </div>
+        <p class="answer-detail">茨城県、埼玉県、千葉県、東京都、神奈川県、京都府、大阪府、滋賀県、兵庫県、奈良県、和歌山県、徳島県<br>離島・一部地域は対応しておりません。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">法人依頼の場合、後日請求書払いは可能ですか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">ご利用いただけます。</p>
+        </div>
+        <p class="answer-detail">法人のお客様には後日請求書払いをご利用いただけます。<br>ご契約時にお申し付けください。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 10 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">作業中、部屋が汚れたりしますか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">いいえ、部屋は汚れません。</p>
+        </div>
+        <p class="answer-detail">作業時には、洗濯機周辺や玄関からの導線の床に養生を行いますのでご安心ください。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 11 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">自宅に風呂場がない場合も、洗浄は可能ですか？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">水栓柱(外構)等の場所が必要です。</p>
+        </div>
+        <p class="answer-detail">洗浄作業のため、お風呂場・シャワールーム・水栓柱(外構)等の場所が必要になります。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 12 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">無料駐車できる場所が無い場合は？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">無料の駐車場1台分をご用意ください。</p>
+        </div>
+        <p class="answer-detail">ご用意できない場合、周辺(徒歩10分以内)の有料駐車場を使用します。その際の駐車場代はお客様負担(洗濯機1台あたり3時間分。作業料とご一緒にご請求致します。超過時は弊社が負担します。)となります。</p>
+      </div>
+    </div>
+
+    <!-- FAQ 13 -->
+    <div class="faq-card">
+      <div class="faq-content">
+        <div class="question-row">
+          <div class="q-icon"><span>Q</span></div>
+          <p class="question-text">分解してた際に故障したら？</p>
+        </div>
+        <div class="divider"></div>
+        <div class="answer-row">
+          <div class="a-icon"><span>A</span></div>
+          <p class="answer-title">代替品の設置し、故障した洗濯機を修理いたします。</p>
+        </div>
+        <p class="answer-detail">ご用意できない場合、周辺(徒歩10分以内)の有料駐車場を使用します。その際の駐車場代はお客様負担(洗濯機1台あたり3時間分。作業料とご一緒にご請求致します。超過時は弊社が負担します。)となります。</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

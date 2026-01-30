@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>お客様の声 | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== メインセクション ===== */
+    .reviews-section {
+      position: relative;
+      width: 375px;
+      margin: 0 auto;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ===== 背景画像 ===== */
+    .bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bg-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== レビューブロック ===== */
+    .review-block {
+      position: relative;
+      z-index: 1;
+      width: 335px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    /* ===== タイトル ===== */
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 28px;
+      letter-spacing: 1.04px;
+      color: #001f66;
+      text-align: center;
+    }
+
+    /* ===== Before/After 画像 ===== */
+    .before-after-img {
+      width: 280px;
+      height: 175px;
+    }
+
+    .before-after-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== レビューコメント ===== */
+    .review-comment {
+      display: flex;
+      align-items: flex-end;
+      gap: 5px;
+      width: 100%;
+    }
+
+    .review-comment.right {
+      flex-direction: row-reverse;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 77px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: auto;
+    }
+
+    .speech-bubble {
+      position: relative;
+      background: #fff;
+      border: 2px solid #5ac0de;
+      border-radius: 10px;
+      padding: 11px 15px;
+      flex: 1;
+    }
+
+    .speech-bubble::before {
+      content: '';
+      position: absolute;
+      bottom: 15px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .speech-bubble.left::before {
+      left: -12px;
+      border-width: 8px 12px 8px 0;
+      border-color: transparent #5ac0de transparent transparent;
+    }
+
+    .speech-bubble.left::after {
+      content: '';
+      position: absolute;
+      bottom: 17px;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 10px 6px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    .speech-bubble.right::before {
+      right: -12px;
+      border-width: 8px 0 8px 12px;
+      border-color: transparent transparent transparent #5ac0de;
+    }
+
+    .speech-bubble.right::after {
+      content: '';
+      position: absolute;
+      bottom: 17px;
+      right: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 0 6px 10px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .comment-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.56px;
+      color: #001f66;
+      margin-bottom: 2px;
+    }
+
+    .comment-author {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.48px;
+      color: #000;
+      text-align: right;
+    }
+
+    /* ===== 区切り線 ===== */
+    .divider {
+      position: relative;
+      z-index: 1;
+      width: 280px;
+      height: 2px;
+      background: #ffe500;
+    }
+
+    /* ===== レビュー2 ===== */
+    .review-2 .avatar {
+      width: 72px;
+      height: 78px;
+    }
+
+    /* ===== レビュー3 ===== */
+    .review-3 .avatar {
+      width: 70px;
+      height: 78px;
+    }
+  </style>
+</head>
+<body>
+  <section class="reviews-section">
+    <!-- 背景画像 -->
+    <div class="bg-image">
+      <img src="section-11-assets/cfdd0cc00047d09d6749d31873906985a62f94b3.png" alt="">
+    </div>
+
+    <!-- レビュー1 -->
+    <div class="review-block">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/ba0c2c305130c9f3c47e758ea7a3e861e3d98de8.png" alt="Before After">
+      </div>
+      <div class="review-comment">
+        <div class="avatar">
+          <img src="section-11-assets/5fb5df3f62fcc7898d5e1bf890062fe9b12b239b.png" alt="お客様A">
+        </div>
+        <div class="speech-bubble left">
+          <p class="comment-text">黒カビや汚れがこんなにあったのかと驚きました。プロの技術で完全にキレイになりました。</p>
+          <p class="comment-author">50代主婦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区切り線 -->
+    <div class="divider"></div>
+
+    <!-- レビュー2 -->
+    <div class="review-block review-2">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/5df7ac5d7ad69d730141804d321fdefeb43d7308.png" alt="Before After">
+      </div>
+      <div class="review-comment right">
+        <div class="avatar">
+          <img src="section-11-assets/40fc911d825b928e4155e4c8df0cbd804c09a640.png" alt="お客様B">
+        </div>
+        <div class="speech-bubble right">
+          <p class="comment-text">カビの匂いが気にならなくなって、洗面所に清潔感がでました！</p>
+          <p class="comment-author">40代主婦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 区切り線 -->
+    <div class="divider"></div>
+
+    <!-- レビュー3 -->
+    <div class="review-block review-3">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="before-after-img">
+        <img src="section-11-assets/3282ce8b8a0fd6ebb69ee2e778a060b867e8dc3c.png" alt="Before After">
+      </div>
+      <div class="review-comment">
+        <div class="avatar">
+          <img src="section-11-assets/da86d319bff7588ac4db8c1bceda21cdb70416ab.png" alt="お客様C">
+        </div>
+        <div class="speech-bubble left">
+          <p class="comment-text">洗濯機クリーナーを使ってメンテナンスしていましたが、実際の汚れをみてびっくりしました！</p>
+          <p class="comment-author">50代主婦</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

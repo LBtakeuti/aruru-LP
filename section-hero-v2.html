@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=375, initial-scale=1.0">
+  <title>ヒーローセクション V2 (泥汚れバージョン) | 洗濯機クリーニング</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fff;
+    }
+
+    /* ===== メインセクション ===== */
+    .hero-v2-section {
+      width: 375px;
+      height: 962px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* ===== ヘッダー ===== */
+    .header {
+      width: 375px;
+      height: 60px;
+      background: #001f66;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: 160px;
+      height: 40px;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-right: 15px;
+    }
+
+    .header-icon {
+      width: 34px;
+      height: 34px;
+    }
+
+    .header-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== サブヘッダー ===== */
+    .sub-header {
+      width: 375px;
+      height: 62px;
+      background: linear-gradient(90deg, #d8d8d8 0%, #fff 49.52%, #d8d8d8 100%);
+      border: 4px solid #d1d1d1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sub-header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 301px;
+    }
+
+    .sub-header-row {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .sub-header-row span {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .text-navy-sm {
+      font-size: 13px;
+      line-height: 12px;
+      color: #001f66;
+    }
+
+    .text-blue-lg {
+      font-size: 18px;
+      line-height: 18px;
+      color: #006ea0;
+    }
+
+    .text-pink-lg {
+      font-size: 18px;
+      line-height: 18px;
+      color: #ff568f;
+    }
+
+    .text-navy-md {
+      font-size: 14px;
+      line-height: 12px;
+      color: #001f66;
+    }
+
+    .sub-header-row-2 {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ===== メインビジュアル ===== */
+    .main-visual {
+      width: 375px;
+      height: 840px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 52px;
+    }
+
+    .main-visual-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .main-visual-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ===== 上部コンテンツ ===== */
+    .top-content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 317px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-copy-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .main-copy {
+      width: 355px;
+      height: 134px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-copy img {
+      position: absolute;
+      left: -3.66%;
+      top: 0;
+      width: 109.86%;
+      height: 100.33%;
+    }
+
+    /* ===== 泥汚れセクション ===== */
+    .dirt-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    .dirt-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+
+    .dirt-badges {
+      width: 210px;
+      height: 128px;
+      position: relative;
+    }
+
+    .dirt-badges-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      width: 210px;
+      padding-right: 9px;
+    }
+
+    .dirt-badges-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .dirt-badge-wrapper {
+      width: 90px;
+      height: 75px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dirt-badge-wrapper-top {
+      justify-content: flex-start;
+    }
+
+    .dirt-badge-wrapper-bottom {
+      justify-content: flex-end;
+    }
+
+    .dirt-badge {
+      width: 90px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dirt-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .dirt-badge-text {
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 12px;
+      color: #fff;
+      text-shadow: 0px 0px 6px #7e6400;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .dirt-badges-center {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 46px;
+      width: 100%;
+    }
+
+    .maintenance-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #5f2d00;
+      text-align: center;
+      text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff;
+    }
+
+    /* ===== 中央コンテンツ ===== */
+    .middle-content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 337px;
+    }
+
+    .arrow-section {
+      width: 148px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow-triangle {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 25px solid #001f66;
+    }
+
+    .copy-section {
+      width: 100%;
+      height: 119px;
+      position: relative;
+    }
+
+    .copy-section-inner {
+      position: absolute;
+      top: 26px;
+      left: 0;
+      width: 335px;
+      height: 93px;
+    }
+
+    .copy-section-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pro-text {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 20px;
+      color: #001f66;
+      text-align: center;
+      text-shadow: 0px 0px 10px #fff, 0px 0px 6px #fff;
+      white-space: nowrap;
+    }
+
+    /* ===== 価格セクション（SVG使用） ===== */
+    .price-section-svg {
+      width: 336px;
+      height: 113px;
+    }
+
+    .price-section-svg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ===== 旧価格セクション（未使用） ===== */
+    .price-section {
+      background: linear-gradient(90deg, #00b9f5 0%, #0032c7 49.79%, #00b9f5 100%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price-content {
+      width: 100%;
+      height: 113px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .price-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .price-main-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex: 1;
+      width: 100%;
+    }
+
+    .badge-industry {
+      width: 65px;
+      height: 65px;
+      position: relative;
+      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.6);
+    }
+
+    .badge-industry img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .badge-industry-text {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #82631a;
+      text-align: center;
+    }
+
+    .price-main {
+      width: 242px;
+      height: 40px;
+      position: relative;
+    }
+
+    .price-label {
+      position: absolute;
+      left: 0;
+      top: 15px;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 24px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .price-value {
+      position: absolute;
+      left: 52px;
+      top: 0;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 40px;
+      color: #ffe500;
+      text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .price-unit {
+      position: absolute;
+      right: 0;
+      top: 15px;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 24px;
+      color: #fff;
+    }
+
+    .price-sub-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 100%;
+    }
+
+    .price-sub-text {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 17px;
+      color: #fff;
+    }
+
+    .price-badge {
+      background: #ff568f;
+      padding: 4px 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .price-badge span {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 12px;
+      color: #fff;
+    }
+
+    /* ===== CTAセクション ===== */
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .line-cta {
+      width: 336px;
+      height: 84.384px;
+      background: #2dc64b;
+      border-radius: 4px;
+      box-shadow: 0px 1px 4px 0px rgba(160, 192, 212, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+    }
+
+    .line-cta-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .line-logo-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+    }
+
+    .line-logo {
+      width: 59px;
+      height: 56.384px;
+    }
+
+    .line-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .line-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 6px;
+      width: 247px;
+    }
+
+    .line-btn-top {
+      width: 100%;
+      background: #ffe500;
+      border-radius: 4px;
+      padding: 6px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .line-btn-top span {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      color: #13ab30;
+      text-align: center;
+    }
+
+    .line-btn-main {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 20px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 2px 4px #1eb83c;
+    }
+
+    /* ===== 最短・訪問バー（SVG使用） ===== */
+    .info-bar-svg {
+      width: 302px;
+      height: 36px;
+    }
+
+    .info-bar-svg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* ===== 旧最短・訪問バー（未使用） ===== */
+    .info-bar {
+      width: 302px;
+      height: 36px;
+      background: linear-gradient(90deg, #d8d8d8 0%, #fff 49.52%, #d8d8d8 100%);
+      border: 2px solid #d1d1d1;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 6px;
+      width: 262px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 2px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .info-label {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #001f66;
+    }
+
+    .info-value {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 24px;
+      color: #ff568f;
+    }
+
+    .info-divider {
+      width: 1px;
+      height: 22px;
+      background: #001f66;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-v2-section">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="logo">
+        <img src="section-hero-v2-new-assets/6426eb200f46fa6fcb8c07ca5b6b8134e47abafe.png" alt="手軽にお掃除 あるる">
+      </div>
+      <div class="header-icons">
+        <div class="header-icon">
+          <img src="section-hero-v2-new-assets/b7ccac324319fd62923e36ce7f9fc2d473ed6f60.png" alt="LINE">
+        </div>
+        <div class="header-icon">
+          <img src="section-hero-v2-new-assets/b1bcf0d1ce75555104cf90fbdd72d103ba6ebb9e.png" alt="Instagram">
+        </div>
+      </div>
+    </header>
+
+    <!-- サブヘッダー -->
+    <div class="sub-header">
+      <div class="sub-header-content">
+        <div class="sub-header-row">
+          <span class="text-navy-sm">市販洗剤では落ちない</span>
+          <span class="text-blue-lg">"隠れカビ"</span>
+          <span class="text-navy-sm">までスッキリ</span>
+        </div>
+        <div class="sub-header-row sub-header-row-2">
+          <span class="text-pink-lg">分解洗浄18年のプロ</span>
+          <span class="text-navy-md">が根こそぎ除去</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- メインビジュアル -->
+    <div class="main-visual">
+      <!-- 背景画像 -->
+      <div class="main-visual-bg">
+        <img src="section-hero-v2-new-assets/59904d020045d84277a2f611ae12cdeb3fde84f0.png" alt="">
+      </div>
+
+      <!-- 上部コンテンツ -->
+      <div class="top-content">
+        <!-- メインコピー「洗濯機のお掃除してますか？」 -->
+        <div class="main-copy-wrapper">
+          <div class="main-copy">
+            <img src="section-hero-v2-new-assets/c3ca64c43ffdff5ad26e4c0040794d54190e377a.png" alt="洗濯機のお掃除してますか？">
+          </div>
+        </div>
+
+        <!-- 泥汚れセクション -->
+        <div class="dirt-section">
+          <div class="dirt-content">
+            <div class="dirt-badges">
+              <div class="dirt-badges-inner">
+                <div class="dirt-badges-row">
+                  <div class="dirt-badge-wrapper dirt-badge-wrapper-top">
+                    <div class="dirt-badge">
+                      <img src="section-hero-v2-new-assets/d2aa62a2bb8fa330a37486679dc730a3f2d0ab48.png" alt="">
+                      <span class="dirt-badge-text">泥汚れ</span>
+                    </div>
+                  </div>
+                  <div class="dirt-badge-wrapper dirt-badge-wrapper-bottom">
+                    <div class="dirt-badge">
+                      <img src="section-hero-v2-new-assets/d2aa62a2bb8fa330a37486679dc730a3f2d0ab48.png" alt="">
+                      <span class="dirt-badge-text">泥汚れ</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="dirt-badges-center">
+                  <div class="dirt-badge">
+                    <img src="section-hero-v2-new-assets/d2aa62a2bb8fa330a37486679dc730a3f2d0ab48.png" alt="">
+                    <span class="dirt-badge-text">泥汚れ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="maintenance-text">月一回のメンテナンスでも<br>綺麗になっていないかも…</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 中央コンテンツ -->
+      <div class="middle-content">
+        <!-- 見えないカビ・汚れを徹底除去 -->
+        <div class="copy-section">
+          <p class="pro-text">18年のプロ技術で</p>
+          <div class="copy-section-inner">
+            <img src="section-hero-v2-new-assets/45bf192a8cb9a2568bfc635d650abb6d0e8f734a.png" alt="見えないカビ・汚れを徹底除去！">
+          </div>
+        </div>
+
+        <!-- 価格セクション（SVGエクスポート使用） -->
+        <div class="price-section-svg">
+          <img src="section-hero-v2-new-assets/price-section.svg" alt="業界最安級 縦型4,800円〜">
+        </div>
+
+        <!-- CTAセクション -->
+        <div class="cta-section">
+          <div class="line-cta">
+            <div class="line-cta-inner">
+              <div class="line-logo-wrapper">
+                <div class="line-logo">
+                  <img src="section-hero-v2-new-assets/977f82d5c1f157771873970b8518ad871ac3eb5c.png" alt="LINE">
+                </div>
+              </div>
+              <div class="line-cta-buttons">
+                <div class="line-btn-top">
+                  <span>LINEでかんたん予約</span>
+                </div>
+                <span class="line-btn-main">無料分解診断</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 情報バー（SVGエクスポート使用） -->
+          <div class="info-bar-svg">
+            <img src="section-hero-v2-new-assets/info-bar.svg" alt="最短3日対応 | 訪問・分解0円">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
