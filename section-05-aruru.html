@@ -289,25 +289,6 @@
       padding: 0 3px;
     }
 
-    .feature-icon-3 .percent {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      color: #002769;
-      height: 26.923px;
-      width: 100%;
-    }
-
-    .feature-icon-3 .percent .num {
-      font-size: 18px;
-      line-height: 20px;
-    }
-
-    .feature-icon-3 .percent .unit {
-      font-size: 14px;
-      line-height: 20px;
-    }
-
     .feature-icon-3 .icon-img {
       width: 100%;
       aspect-ratio: 44 / 26;
@@ -326,7 +307,9 @@
 
     .feature-text-3 {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
     }
 
     .feature-text-3 .text-wrap {
@@ -337,14 +320,8 @@
       color: #001f66;
     }
 
-    .feature-text-3 .big-num {
-      font-family: 'Oswald', sans-serif;
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 20px;
-      color: #ff6095;
-      width: 32px;
-      height: 24px;
+    .feature-text-3 .text-wrap .pink {
+      color: #ff568f;
     }
   </style>
 </head>
@@ -425,7 +402,6 @@
         <div class="feature-card-inner">
           <div class="feature-icon">
             <div class="feature-icon-3">
-              <p class="percent"><span class="num">97</span><span class="unit">%</span></p>
               <div class="icon-img">
                 <img src="section-05-assets/aa107c3ac4aa5beed785f1e86335d3155c25682d.png" alt="">
               </div>
@@ -433,7 +409,8 @@
           </div>
           <div class="feature-text-3">
             <div class="text-wrap">
-              <span>お客様満足度</span><span class="big-num">97</span><span>%超え！</span>
+              <p>妥協しない仕上がりへのこだわり</p>
+              <p><span class="pink">お客様</span>の<span class="pink">満足度第一宣言！</span></p>
             </div>
           </div>
         </div>
